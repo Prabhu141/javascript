@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Image</title>
+    <style>
+        div {
+            display: inline-flex;
+            position: relative;
+            text-align: center;
+            margin-left: 2%;
+
+        }
+
+        .inputname {
+            border: 1px solid orangered;
+            width: 100px;
+            height: 18px;
+            padding: 2px;
+            margin-right: 20px;
+        }
+
+        .inputage {
+            border: 1px solid orangered;
+            width: 50px;
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .inputgen {
+            width: 15px;
+            margin-right: 20px;
+        }
+
+        .inputselect {
+            border: 1px solid orangered;
+            width: 100px;
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .select {
+            border: 1px solid orangered;
+            width: 100px;
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .inputzip {
+            border: 1px solid orangered;
+            width: 50px;
+            height: 20px;
+            margin-right: 30px;
+            margin-left: 20px;
+        }
+
+        .inputshipping {
+            border: 1px solid orangered;
+            width: 150px;
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .inputtax {
+            border: 1px solid orangered;
+            width: 70px;
+            height: 20px;
+            text-align: center;
+            margin-right: 20px;
+            margin-left: 10px;
+        }
+
+        .inputprice {
+            border: 1px solid orangered;
+            width: 80px;
+            height: 20px;
+            margin-right: 20px;
+        }
+
+        .submit {
+            border: 1px solid orangered;
+            margin-top: 20px;
+            background-color: blanchedalmond;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            margin-left: 45%;
+        }
+
+        .submit:hover {
+            background-color: blue;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(95, 158, 253, 0.856), 0 2px 2px 0 rgba(95, 158, 253, 0.856);
+        }
+
+        .exv {
+
+            border: 1px solid orangered;
+            width: 40px;
+            height: 20px;
+            margin-right: 20px;
+            padding: 3px 55px;
+            text-align: center;
+        }
+
+        span {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="myform">
+
+        <label for="name">NAME:<br>
+            <input class="inputname" type="text" id="name"><br>
+            <span id="namee" style="color:red;font-size: small;"></span></label>
+
+        <label for="age">AGE :<br>
+            <input type="text" id="age" class="inputage"><br>
+            <span id="agee" style="color:red;font-size: small;"></span></label>
+
+        <label class="Gender" id="gender1"> GENDER :<br>
+            Male<input type="radio" name="gender" value="Male" class="inputgen">
+            Female<input type="radio" name="gender" value="Female" class="inputgen">
+            <br> <span id="genn" style="color:red;font-size: small;"></span>
+        </label>
+
+        <label for="country">COUNTRY :<br>
+            <select id="country" class="inputselect">
+                <option value=""> Select</option>
+                <option value="India"> India</option>
+                <option value="China"> China</option>
+                <option value="Asia"> Asia</option>
+                <option value="Japan"> Japan</option>
+            </select><br>
+            <span id="conn" style="color:red;font-size: small;"></span></label>
+
+        <label for="state">STATE :<br>
+            <select id="state" class="select">
+                <option value=""> Select</option>
+                <option value="Tamilnadu"> Tamilnadu</option>
+                <option value="Delhi"> Delhi</option>
+                <option value="Kerala">kerala</option>
+                <option value="Punjab"> Punjab</option>
+            </select><br><span id="sta" style="color:red;font-size: small;"></span></label>
+
+        <label for="zip">ZIPCODE:<br>
+            <input type="text" id="zip" class="inputzip" required><br>
+            <span id="codee" style="color:red;font-size: small;"></span></label>
+
+        <label for="shipping">SHIPPING:<br>
+            <select id="shipping" class="inputshipping" value="select">
+                <option value=""> Select</option>
+                <option value="10"> ground floor = 10.00</option>
+                <option value="20"> Frist Day Air = 20.00</option>
+                <option value="30"> Third Day Air = 34.00</option>
+            </select><br><span id="shipp" style="color:red;font-size: small;"></span></label>
+
+
+        <label for="tax">TAX:<br>
+            <select id="tax" class="inputtax" value="select">
+                <option value="">Select</option>
+                <option value="0.0825"> 8.25% </option>
+                <option value="0.09"> 9% </option>
+                <option value="0.1"> 10% </option>
+            </select><br><span id="ttax" style="color:red;font-size: small;"></span></label>
+
+
+        <label for="price">PRICE:<br>
+            <input type="text" id="price" class="inputprice"><br>
+            <span id="pricee" style="color:red;font-size: small;"></span></label>
+
+        <label class="language" id="language1"> KNOWN LANGUAGE :<br>
+            Tamil<input type="checkbox" name="language" value="tamil" class="inputgen">
+            English<input type="checkbox" name="language" value="english" class="inputgen">
+            Hindi<input type="checkbox" name="language" value="hindi" class="inputgen">
+            <br> <span id="lann" style="color:red;font-size: small;"></span>
+        </label>
+
+
+    </div><br><br><br><br>
+
+    <input type="button" class="submit" value="submit" form="myform" onclick="myvalue()"><br><br><br><br><br>
+
+    <div>
+        <label for="name">NAME:<br>
+            <input class="inputname" id="user name"></label>
+
+        <label for="age">AGE :<br>
+            <input id="ag" class="inputage"></label>
+
+        <label class="Gender" id="gender1"> GENDER :<br>
+
+            Male<input type="radio" name="gender_appened" id="Male" value="Male" class="inputgen">
+            Female<input type="radio" name="gender_appened" id="Female" value="Female" class="inputgen">
+        </label>
+
+        <label for="country">COUNTRY :<br>
+            <select id="con" class="inputselect" required>
+                <option> Select</option>
+                <option> India</option>
+                <option> China</option>
+                <option> Asia</option>
+                <option> Japan</option>
+            </select></label>
+
+
+        <label for="state">STATE :<br>
+            <select id="stat" class="select" required>
+                <option> Select</option>
+                <option> Tamilnadu</option>
+                <option> Delhi</option>
+                <option>kerala</option>
+                <option> punjab</option>
+            </select></label>
+
+
+        <label for="zip">ZIPCODE:<br>
+            <input id="code" class="inputzip"></label>
+
+        <label for="shipping">SHIPPING:<br>
+            <select id="ship" class="inputshipping" required>
+                <option> Select</option>
+                <option value="10"> ground floor = 10.00</option>
+                <option value="20"> Frist Day Air = 20.00</option>
+                <option value="30"> Third Day Air = 34.00</option>
+            </select></label>
+
+        <label for="tax">TAX:<br>
+            <select id="taxx" class="inputtax" required>
+                <option> Select</option>
+                <option value="0.0825"> 8.25% </option>
+                <option value="0.09"> 9% </option>
+                <option value="0.1"> 10% </option>
+            </select></label>
+
+        <label for="price">PRICE:<br>
+            <input id="pric" class="inputprice"></label>
+
+        <label class="language" id="language1"> KNOWN LANGUAGE :<br>
+            Tamil<input type="checkbox" name="language1" id="tamil" value="tamil" class="inputgen">
+            English<input type="checkbox" name="language1" id="english" value="english" class="inputgen">
+            Hindi<input type="checkbox" name="language1" id="hindi" value="hindi" class="inputgen">
+        </label>
+
+    </div><br><br><br>
+    <p> EXACT VALUE :<span id="result" class="exv"> </span></p>
+
+
+    <script>
+        function myvalue() {
+            // NAME :
+            let name = document.getElementById("name").value;
+            let error = document.getElementById("namee");
+            if (name == "") {
+                error.textContent = "please enter Name";
+            } else {
+                error.textContent = "";
+                document.getElementById("user name").value = name;
+            }
+
+            // AGE :
+            let age = document.getElementById("age").value;
+            let errorM = document.getElementById("agee");
+            if (age == "") {
+                errorM.textContent = "Fill Age";
+            } else {
+                errorM.textContent = "";
+                document.getElementById("ag").value = age;
+            }
+
+            // COUNTRY :
+            let country = document.getElementById("country").value;
+
+            let errorMes = document.getElementById("conn");
+            if (country == "") {
+                errorMes.textContent = "Choose Country";
+            }
+            else {
+                errorMes.textContent = "";
+                document.getElementById("con").value = country;
+            }
+
+
+            // STATE :
+            let state = document.getElementById("state").value;
+            let errorMess = document.getElementById("sta");
+            if (state == "") {
+                errorMess.textContent = "Choose State";
+            }
+            else {
+                errorMess.textContent = "";
+                document.getElementById("stat").value = state;
+            }
+
+            // ZIP CODE :
+            let zipcode = document.getElementById("zip").value;
+            let errorMessa = document.getElementById("codee");
+            if (zipcode == "") {
+                errorMessa.textContent = "Fill Zipcode";
+            }
+            else {
+                errorMessa.textContent = "";
+                document.getElementById("code").value = zipcode;
+            }
+
+            // SHIPPING :
+            let shipping = document.getElementById("shipping").value;
+            let errorMessag = document.getElementById("shipp");
+            if (shipping == "") {
+                errorMessag.textContent = "Choose Shipping";
+            }
+            else {
+                errorMessag.textContent = "";
+                document.getElementById("ship").value = shipping;
+            }
+
+            // TAX :
+            let tax = document.getElementById("tax").value;
+            let errorMessage = document.getElementById("ttax");
+            if (tax == "") {
+                errorMessage.textContent = "Choose tax";
+            }
+            else {
+                errorMessage.textContent = "";
+                document.getElementById("taxx").value = tax;
+            }
+
+            // PRICE :
+            let price = document.getElementById("price").value;
+            let errorMessagee = document.getElementById("pricee");
+            if (price == "") {
+                errorMessagee.textContent = "Enter Price";
+            }
+            else {
+                errorMessagee.textContent = "";
+                document.getElementById("pric").value = price;
+            }
+
+
+            // LANGUAGE :
+            let checkboxes1 = document.getElementsByName("language");
+            let errorMeessagee = document.getElementById("lann");
+            if (Array.from(checkboxes1).some(checkbox => checkbox.checked)) {
+
+                errorMeessagee.textContent = "";
+                checkedValues = Array.from(checkboxes1)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.value);
+
+                checkboxes2 = document.getElementsByName("language1");
+                Array.from(checkboxes2).filter(checkbox => {
+                    checkbox.checked = checkedValues.includes(checkbox.value);
+                });
+            }
+            else {
+                errorMeessagee.textContent = "Choose one Option";
+            }
+
+
+            // CALCULATION = shipping + price / tax 
+            let a = parseInt(document.getElementById("shipping").value);
+            let b = parseInt(document.getElementById("price").value);
+            let c = a + b;
+            let d = parseFloat(document.getElementById("tax").value);
+            let e = d * c;
+            document.getElementById("result").innerHTML = c + e;
+
+            // GENDER :
+            let radioButtonGroup = document.getElementsByName("gender");
+
+            let errorrMessagee = document.getElementById("genn");
+            if (Array.from(radioButtonGroup).find((radio) => radio.checked)) {
+                errorrMessagee.textContent = "";
+                checkedRadio = Array.from(radioButtonGroup).find(
+                    (radio) => radio.checked
+                );
+                gender = checkedRadio.value;
+                document.getElementById(gender).checked = true;
+
+            }
+            else {
+                errorrMessagee.textContent = "Choose one Option";
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
